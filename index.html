@@ -5,9 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="/src/style.css" rel="stylesheet" />
     </head>
-    <body class="font-family-default bg-background text-white mx-6 my-18">
+    <body
+        class="font-family-default bg-background text-white mx-6 my-18 md:mx-20"
+    >
         <main>
-            <div class="bg-card-bg rounded-[0.975em]">
+            <div class="bg-card-bg rounded-[0.975em] mb-6">
                 <div
                     class="flex gap-6 items-center bg-profile-bg p-8 rounded-[0.975em]"
                 >
@@ -23,12 +25,14 @@
                         <p class="text-2xl font-light">Jeremy Robson</p>
                     </div>
                 </div>
-                <div class="flex justify-around py-6">
-                    <p class="text-smaller-text">Daily</p>
-                    <p>Weekly</p>
-                    <p class="text-smaller-text">Monthly</p>
+                <div class="flex justify-around py-6 text-smaller-text">
+                    <p data-timeframe="daily" id="daily">Daily</p>
+                    <p data-timeframe="weekly" id="weekly">Weekly</p>
+                    <p data-timeframe="monthly" id="monthly">Monthly</p>
                 </div>
             </div>
+            <div id="activity-card" class="md:grid grid-cols-3 gap-6"></div>
         </main>
+        <script type="module" src="/src/main.ts"></script>
     </body>
 </html>
