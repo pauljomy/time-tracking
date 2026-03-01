@@ -1,4 +1,10 @@
 import rawData from "./data.json";
+import iconWork from "./assets/img/icon-work.svg";
+import iconPlay from "./assets/img/icon-play.svg";
+import iconStudy from "./assets/img/icon-study.svg";
+import iconExercise from "./assets/img/icon-exercise.svg";
+import iconSocial from "./assets/img/icon-social.svg";
+import iconSelfCare from "./assets/img/icon-self-care.svg";
 
 const cardEl = document.getElementById("activity-card");
 
@@ -24,12 +30,12 @@ type ActivityConfig = {
 };
 
 const activityConfig: Record<string, ActivityConfig> = {
-  Work: { color: "#FF8B64", icon: "src/assets/img/icon-work.svg" },
-  Play: { color: "#55C2E6", icon: "src/assets/img/icon-play.svg" },
-  Study: { color: "#FF5E7D", icon: "src/assets/img/icon-study.svg" },
-  Exercise: { color: "#4BCF82", icon: "src/assets/img/icon-exercise.svg" },
-  Social: { color: "#7335D2", icon: "src/assets/img/icon-social.svg" },
-  "Self Care": { color: "#F1C75B", icon: "src/assets/img/icon-self-care.svg" },
+  Work: { color: "#FF8B64", icon: iconWork },
+  Play: { color: "#55C2E6", icon: iconPlay },
+  Study: { color: "#FF5E7D", icon: iconStudy },
+  Exercise: { color: "#4BCF82", icon: iconExercise },
+  Social: { color: "#7335D2", icon: iconSocial },
+  "Self Care": { color: "#F1C75B", icon: iconSelfCare },
 };
 
 createCard(data, "daily");
