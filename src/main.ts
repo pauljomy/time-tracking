@@ -71,12 +71,12 @@ function createCard(data: Category[], timeframes: string) {
             : "Last Month";
 
       return `<div
-          class="h-42  flex flex-col justify-end rounded-[0.9375em] relative overflow-hidden mb-6" style="background-color:${cardColor} "
+          class="pt-10 xl:pt-0  flex flex-col justify-end rounded-[0.9375em] relative overflow-hidden mb-6 md:mb-0" style="background-color:${cardColor} "
       >
           <img
               src="${cardIcon}"
               alt="a ${item.title} icon"
-              class="w-20 absolute -top-2 right-5 opacity-250 "
+              class="w-20 h-20 absolute -top-2 right-5 opacity-250 object-contain"
           />
           <div class="bg-card-bg rounded-[0.9375em] p-6 z-10">
               <div class="flex justify-between items-center align-center">
@@ -84,8 +84,8 @@ function createCard(data: Category[], timeframes: string) {
                   <p class="text-smaller-text">•••</p>
               </div>
               <div class="flex justify-between items-center md: flex-col md:items-start">
-                  <p class="text-[2em] font-light">${current}hrs</p>
-                  <p class="text-smaller-text">${label} - ${previous}hrs</p>
+                  <p class="text-[2em] font-light md:text-[3.5em]">${current}hrs</p>
+                  <p class="text-smaller-text md:text-[0.9375em]">${label} - ${previous}hrs</p>
               </div>
           </div>
       </div>`;
